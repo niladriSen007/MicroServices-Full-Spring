@@ -1,0 +1,17 @@
+spring:
+  servlet:
+    context-path: /accounts
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:postgresql://localhost:5432/microservices-accounts
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: microservices-account
+server:
+  port: 8000
+
