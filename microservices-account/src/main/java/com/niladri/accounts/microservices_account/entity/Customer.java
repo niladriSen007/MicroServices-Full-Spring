@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,6 +18,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "t_customer")
 public class Customer extends BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,12 +26,12 @@ public class Customer extends BaseEntity {
   private Long customerId;
 
   @Column(name = "customer_name")
-  private String customerName;
+  private StringBuilder customerName;
 
   @Column(name = "customer_email")
-  private String customerEmail;
+  private StringBuilder customerEmail;
 
   @Column(name = "customer_mobile")
-  private String customerMobile;
+  private StringBuilder customerMobile;
 
 }

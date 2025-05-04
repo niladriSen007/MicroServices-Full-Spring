@@ -24,17 +24,17 @@ import lombok.ToString;
 public class BaseEntity {
   @CreatedBy
   @Column(updatable = false)
-  private String createdBy;
+  private StringBuilder createdBy;
 
   @CreatedDate
   @Column(updatable = false)
-  private String createdAt;
+  private StringBuilder createdAt;
 
   @LastModifiedBy
   @Column(insertable = false)
-  private String updatedBy;
+  private StringBuilder updatedBy;
 
   @LastModifiedDate
   @Column(insertable = false)
-  private String updatedAt;
+  private StringBuilder updatedAt;
 }

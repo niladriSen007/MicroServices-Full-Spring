@@ -21,15 +21,15 @@ public class Account extends BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "account_number")
-  private Long accountNUmber;
+  private Long accountNumber;
 
   @Column(name = "customer_id")
   private Long customerId;
 
   @Column(name = "account_type")
-  private String accountType;
+  private StringBuilder accountType;
 
   @Column(name = "branch_address")
-  private String branchAddress;
+  private StringBuilder branchAddress;
 
 }
